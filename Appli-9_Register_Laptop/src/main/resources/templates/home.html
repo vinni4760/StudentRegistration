@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" >
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  <div>
+   <form th:action="@{/laptop/register}" th:object="${laptop}" method="post">
+     <div>
+      Enter Model :
+      <input type="text" th:field="*{model}"/>
+     </div>
+     <div>
+      Enter Version :
+      <input type="text" th:field="*{version}"/>
+     </div>
+     <div>
+     Enter Price :
+      <input type="text" th:field="*{price}"/>
+     </div>
+       <button>Register</button>
+   </form>
+  </div>
+</body>
+</html>
